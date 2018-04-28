@@ -12,13 +12,13 @@ d) INSERT INTO leistung (nr, modul, form, student, datum, versuch, dozent, note,
 
 Aufgabe 2)
 
-a)  update modul set langname='Ein Dozent_Modul', semester=1 where kurzzeichen='EINDOZ';
+a)  update modul set langname='Ein Dozent_Modul', semester=1 where kurzzeichen='Mimimi';
 
 b)  update leistung set datum=datum+3 where nr=114;
 
-c)  XXX
+c)  update modul set dozent2=(select nr from dozent where nr=12) and modul.kurzzeichen'Mimimi';
 
-d) XXX
+d) update leistung set dozent=null where dozent=12 and modul='Mimimi' and student=1;
 
 Aufgabe 3)
 

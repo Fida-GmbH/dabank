@@ -36,4 +36,20 @@ c) select count(nr) from leistung;
 
 Aufgabe 4)
 
-a) XXX
+a) 	create table form(nr serial, bezeichnung varchar(30), kuerzel char(2));
+	alter table form add constraint nr_ist_primaer_schluessel primary key (nr);
+	alter table form add constraint  eindeutig_nicht_null unique  (bezeichnung, kuerzel);
+	alter table form alter column bezeichnung set not null;
+	alter table form alter column kuerzel set not null;
+--oder die 2. Möglichkeit
+	create table form (nr serial primary key, bezeichnung varchar(30) unique not null, kuerzel char(2) unique not null);
+
+b) create table modulDozent(modul varchar(8), dozent int, semester int check(semester >=1 and semester <=7), primary key (dozent, modul));
+
+Aufgabe 5) 
+
+a)
+b)
+
+
+

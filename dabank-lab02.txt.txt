@@ -16,7 +16,7 @@ a)  update modul set langname='Ein Dozent_Modul', semester=1 where kurzzeichen='
 
 b)  update leistung set datum=datum+3 where nr=114;
 
-c)  update modul set dozent2=(select nr from dozent where nr=12) and modul.kurzzeichen'Mimimi';
+c)  update modul set dozent2=(select nr from dozent where nr=12) where modul.kurzzeichen='Mimimi';
 
 d) update leistung set dozent=null where dozent=12 and modul='Mimimi' and student=1;
 

@@ -18,14 +18,22 @@ b)  update leistung set datum=datum+3 where nr=114;
 
 c)  update modul set dozent2=(select nr from dozent where nr=12) where modul.kurzzeichen='Mimimi';
 
-d) update leistung set dozent=null where dozent=12 and modul='Mimimi' and student=1;
+d)  update leistung set dozent=null where dozent=12 and modul='Mimimi' and student=1;
 
 Aufgabe 3)
 
+a) select * from modul where kurzzeichen='Mimimi';
+   delete from dozent where kuerzel='Wer';
+   select * from modul where kurzzeichen='Mimimi';
+
+b) select count(nr) from leistung;
+   delete from modul where kurzzeichen='Mimimi';
+   delete from student where matrikelnr=1;
+
+c) select count(nr) from leistung;
+   delete from modul where kurzzeichen='Mimimi';
+   
+
+Aufgabe 4)
+
 a) XXX
-
-b) XXX
-
-c) XXX
-
-d) XXX
